@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Clients"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0C000000"
+    android:textAlignment="textStart"
+    app:flow_verticalAlign="center"
+    tools:context=".CentreController"
+    tools:visibility="visible">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_marginBottom="4dp"
+        android:background="#D3FFFFFF"
+        android:focusable="auto"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:overScrollMode="never"
+        android:textAlignment="center"
+        app:flow_horizontalAlign="center"
+        app:flow_verticalAlign="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_wrapBehaviorInParent="horizontal_only"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="                      "
+            android:visibility="visible"
+            tools:ignore="HardcodedText"
+            tools:visibility="invisible" />
+
+        <ImageButton
+            android:id="@+id/CalendarButton"
+            android:layout_width="82.5dp"
+            android:layout_height="70dp"
+            android:backgroundTint="@android:color/white"
+            android:contentDescription="TODO"
+            android:onClick="calendarButton"
+            android:scaleType="centerCrop"
+            android:scaleY="1.1"
+            android:visibility="visible"
+            app:srcCompat="@drawable/calendar"
+            tools:ignore="ContentDescription,HardcodedText,DuplicateSpeakableTextCheck,ImageContrastCheck" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="              "
+            android:visibility="invisible"
+            tools:ignore="HardcodedText"
+            tools:visibility="invisible" />
+
+        <ImageButton
+            android:id="@+id/BackButton"
+            android:layout_width="80dp"
+            android:layout_height="70dp"
+            android:layout_weight="0"
+            android:backgroundTint="@android:color/white"
+            android:contentDescription="TODO"
+            android:scaleType="centerCrop"
+            android:visibility="visible"
+            app:srcCompat="@drawable/clients_black"
+            tools:ignore="ContentDescription,HardcodedText,ImageContrastCheck" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="              "
+            android:visibility="invisible"
+            tools:ignore="HardcodedText"
+            tools:visibility="invisible" />
+
+        <ImageButton
+            android:id="@+id/ExitButton"
+            android:layout_width="80dp"
+            android:layout_height="75dp"
+            android:layout_weight="0"
+            android:backgroundTint="@android:color/white"
+            android:contentDescription="TODO"
+            android:onClick="exitButton"
+            android:scaleType="centerCrop"
+            android:scaleX="0.9"
+            android:scaleY="0.9"
+            android:visibility="visible"
+            app:srcCompat="@drawable/exit"
+            tools:ignore="ContentDescription,HardcodedText,ImageContrastCheck" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="63dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="                       "
+            android:visibility="invisible"
+            tools:ignore="HardcodedText"
+            tools:visibility="invisible" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:background="#FFFFFF"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/TitleClients"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="#FFFFFF"
+            android:fontFamily="sans-serif-black"
+            android:gravity="center"
+            android:text=" Клієнти"
+            android:textAlignment="textStart"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:visibility="visible"
+            app:autoSizeTextType="none"
+            tools:ignore="HardcodedText,RtlCompat" />
+
+        <View
+            android:id="@+id/divider7"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="?android:attr/listDivider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="#8C92B5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/PaidFor"
+                    android:layout_width="200dp"
+                    android:layout_height="60dp"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center"
+                    android:text=" Поточний прибуток"
+                    android:textAlignment="textStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:visibility="visible"
+                    tools:ignore="HardcodedText,RtlCompat,TextSizeCheck" />
+
+                <TextView
+                    android:id="@+id/ArrearsPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:gravity="center"
+                    android:text="INT"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:visibility="visible"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divider6"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="?android:attr/listDivider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:scrollbars="none"
+                android:verticalScrollbarPosition="defaultPosition">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    tools:ignore="UselessParent">
+
+                    <EditText
+                        android:id="@+id/ClientsName"
+                        android:layout_width="155dp"
+                        android:layout_height="60dp"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:visibility="visible"
+                        tools:ignore="Autofill,HardcodedText,LabelFor"
+                        tools:text="Ім'я"
+                        tools:visibility="visible" />
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonName2"
+                        android:layout_width="90dp"
+                        android:layout_height="60dp"
+                        android:ems="10"
+                        android:inputType="number"
+                        android:textAlignment="center"
+                        android:visibility="visible"
+                        tools:ignore="Autofill,HardcodedText,LabelFor,DuplicateSpeakableTextCheck"
+                        tools:text="INT"
+                        tools:visibility="visible" />
+
+                    <ImageButton
+                        android:id="@+id/AddClientsButton"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_weight="0"
+                        android:backgroundTint="@color/white"
+                        android:onClick="addUserButton"
+                        android:scaleType="centerInside"
+                        android:visibility="visible"
+                        app:srcCompat="@drawable/add_128x128_438888"
+                        tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+                    <ImageButton
+                        android:id="@+id/EditButton"
+                        android:layout_width="48dp"
+                        android:layout_height="60dp"
+                        android:layout_weight="0"
+                        android:backgroundTint="@android:color/white"
+                        android:contentDescription="TODO"
+                        android:onClick="updateUserButton"
+                        android:scaleType="centerCrop"
+                        android:visibility="visible"
+                        app:srcCompat="@drawable/edit_128x128_1617698"
+                        tools:ignore="ContentDescription,HardcodedText" />
+
+                    <ImageButton
+                        android:id="@+id/DeleteButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0"
+                        android:backgroundTint="@android:color/white"
+                        android:onClick="deleteUserButton"
+                        android:scaleType="centerCrop"
+                        android:visibility="visible"
+                        app:srcCompat="@drawable/delete_128x128_14691"
+                        tools:ignore="ContentDescription,VisualLintBounds,SpeakableTextPresentCheck"
+                        tools:targetApi="s" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divider12"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="?android:attr/listDivider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="475dp"
+                android:orientation="vertical">
+
+
+                <ListView
+                    android:id="@+id/ListLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#1D807E7E"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider19"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="?android:attr/listDivider" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/TimeSpace"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1D807E7E"
+    android:textAlignment="textStart"
+    app:flow_verticalAlign="center"
+    tools:context=".CentreController"
+    tools:visibility="visible">
+
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="669dp"
+        android:orientation="vertical"
+        android:visibility="visible"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp"
+        tools:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:orientation="vertical"
+            android:visibility="visible"
+            tools:ignore="UselessParent">
+
+            <TextView
+                android:id="@+id/TitleTime"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center"
+                android:text=" Погодинний графік"
+                android:textAlignment="textStart"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                android:visibility="visible"
+                app:autoSizeTextType="none"
+                tools:ignore="HardcodedText,MissingConstraints,RtlCompat" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider20"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="?android:attr/listDivider"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#8C92B5"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/DateText"
+                android:layout_width="200dp"
+                android:layout_height="30dp"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:text="  Дата"
+                android:textAlignment="textStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:visibility="visible"
+                tools:ignore="HardcodedText,RtlCompat,TextSizeCheck" />
+
+            <TextView
+                android:id="@+id/Date"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:text="INT"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:visibility="visible"
+                tools:ignore="HardcodedText,TextSizeCheck" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider21"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="?android:attr/listDivider"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:gravity="center"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent">
+
+            <Spinner
+                android:id="@+id/spinner1"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:spinnerMode="dialog"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <View
+                android:id="@+id/divider22"
+                android:layout_width="10dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:background="@color/white" />
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:spinnerMode="dialog"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <View
+                android:id="@+id/divider3"
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:background="@color/white" />
+
+            <ImageButton
+                android:id="@+id/EditButton"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_weight="0"
+                android:backgroundTint="@android:color/white"
+                android:contentDescription="TODO"
+                android:onClick="addUserOnTimePeriod"
+                android:scaleType="centerCrop"
+                android:visibility="visible"
+                app:srcCompat="@drawable/add_128x128_438888"
+                tools:ignore="ContentDescription,HardcodedText,DuplicateSpeakableTextCheck" />
+
+            <ImageButton
+                android:id="@+id/deleteButton"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_weight="0"
+                android:backgroundTint="@android:color/white"
+                android:scaleType="centerCrop"
+                android:visibility="visible"
+                android:onClick="delete"
+                app:srcCompat="@drawable/delete_128x128_14691"
+                tools:ignore="ContentDescription,VisualLintBounds,SpeakableTextPresentCheck"
+                tools:targetApi="s" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider13"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="?android:attr/listDivider"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <ListView
+                android:id="@+id/TimeView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#1D807E7E">
+
+            </ListView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider23"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="?android:attr/listDivider"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints,VisualLintBounds"
+        tools:layout_editor_absoluteY="665dp" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="75dp"
+        android:layout_marginBottom="4dp"
+        android:background="#D3FFFFFF"
+        android:focusable="auto"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:overScrollMode="never"
+        android:textAlignment="center"
+        android:visibility="visible"
+        app:flow_horizontalAlign="center"
+        app:flow_verticalAlign="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_wrapBehaviorInParent="horizontal_only"
+        tools:ignore="MissingConstraints">
+
+        <ImageButton
+            android:id="@+id/BackButton"
+            android:layout_width="80dp"
+            android:layout_height="70dp"
+            android:layout_weight="0"
+            android:backgroundTint="@android:color/white"
+            android:contentDescription="TODO"
+            android:onClick="calendarButton"
+            android:scaleType="centerCrop"
+            android:visibility="visible"
+            app:srcCompat="@drawable/back"
+            tools:ignore="ContentDescription,HardcodedText,DuplicateSpeakableTextCheck" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0"
+            android:background="@color/white" />
+
+        <ImageButton
+            android:id="@+id/ExitButton"
+            android:layout_width="80dp"
+            android:layout_height="75dp"
+            android:layout_weight="0"
+            android:backgroundTint="@android:color/white"
+            android:contentDescription="TODO"
+            android:onClick="exitButton"
+            android:scaleType="centerCrop"
+            android:scaleX="0.9"
+            android:scaleY="0.9"
+            android:visibility="visible"
+            app:srcCompat="@drawable/exit"
+            tools:ignore="ContentDescription,HardcodedText,ImageContrastCheck" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

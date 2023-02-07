@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Calendar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0C000000"
+    android:textAlignment="textStart"
+    app:flow_verticalAlign="center"
+    tools:context=".CentreController"
+    tools:visibility="visible">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
+
+            <TextView
+                android:id="@+id/TitleCalendar"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center"
+                android:text=" Календар"
+                android:textAlignment="textStart"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                android:visibility="visible"
+                app:autoSizeTextType="none"
+                tools:ignore="HardcodedText,MissingConstraints,RtlCompat" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider15"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="?android:attr/listDivider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#8C92B5"
+            android:orientation="horizontal"/>
+
+        <View
+            android:id="@+id/divider16"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="?android:attr/listDivider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#8C92B5"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/AllTimeMoneyText"
+                android:layout_width="230dp"
+                android:layout_height="60dp"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:text="  Прибуток за весь час"
+                android:textAlignment="textStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:visibility="visible"
+                tools:ignore="HardcodedText,RtlCompat,TextSizeCheck" />
+
+            <TextView
+                android:id="@+id/AllTimeMoney"
+                android:layout_width="180dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:text=" "
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:visibility="visible"
+                tools:ignore="HardcodedText,TextSizeCheck,SpeakableTextPresentCheck" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider17"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="?android:attr/listDivider" />
+
+        <CalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:dateTextAppearance="@style/TextAppearance.AppCompat.Large"
+            android:visibility="visible"
+            android:weekDayTextAppearance="@style/TextAppearance.AppCompat.Medium"
+            tools:ignore="DuplicateClickableBoundsCheck,KeyboardInaccessibleWidget"
+            tools:visibility="visible" />
+
+        <View
+            android:id="@+id/divider24"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="?android:attr/listDivider"
+            tools:ignore="MissingConstraints" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider18"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="?android:attr/listDivider"
+        tools:layout_editor_absoluteX="-16dp"
+        tools:layout_editor_absoluteY="666dp"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_marginBottom="4dp"
+        android:background="#D3FFFFFF"
+        android:focusable="auto"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:overScrollMode="never"
+        android:textAlignment="center"
+        android:visibility="visible"
+        app:flow_horizontalAlign="center"
+        app:flow_verticalAlign="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_wrapBehaviorInParent="horizontal_only"
+        tools:ignore="MissingConstraints"
+        tools:visibility="visible">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="                      "
+            android:visibility="invisible"
+            tools:ignore="HardcodedText"
+            tools:visibility="invisible" />
+
+        <ImageButton
+            android:id="@+id/CalendarButton"
+            android:layout_width="82.5dp"
+            android:layout_height="70dp"
+            android:backgroundTint="@android:color/white"
+            android:contentDescription="TODO"
+            android:onClick="calendarButton"
+            android:scaleType="centerCrop"
+            android:scaleY="1.1"
+            android:visibility="visible"
+            app:srcCompat="@drawable/calendar_black"
+            tools:ignore="ContentDescription,HardcodedText,DuplicateSpeakableTextCheck,ImageContrastCheck" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="              "
+            android:visibility="invisible"
+            tools:ignore="HardcodedText"
+            tools:visibility="invisible" />
+
+        <ImageButton
+            android:id="@+id/BackButton"
+            android:layout_width="80dp"
+            android:layout_height="70dp"
+            android:layout_weight="0"
+            android:backgroundTint="@android:color/white"
+            android:contentDescription="TODO"
+            android:onClick="clientsButton"
+            android:scaleType="centerCrop"
+            android:visibility="visible"
+            app:srcCompat="@drawable/clients"
+            tools:ignore="ContentDescription,HardcodedText" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="              "
+            android:visibility="invisible"
+            tools:ignore="HardcodedText"
+            tools:visibility="invisible" />
+
+        <ImageButton
+            android:id="@+id/ExitButton"
+            android:layout_width="80dp"
+            android:layout_height="75dp"
+            android:layout_weight="0"
+            android:backgroundTint="@android:color/white"
+            android:contentDescription="TODO"
+            android:onClick="exitButton"
+            android:scaleType="centerCrop"
+            android:scaleX="0.9"
+            android:scaleY="0.9"
+            android:visibility="visible"
+            app:srcCompat="@drawable/exit"
+            tools:ignore="ContentDescription,HardcodedText,ImageContrastCheck" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="63dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="                       "
+            android:visibility="invisible"
+            tools:ignore="HardcodedText"
+            tools:visibility="invisible" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
